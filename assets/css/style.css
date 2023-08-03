@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* brand color palette */
+  :root {
+    --primary: navy;
+    --secondary: #D4CAA3;
+    --tertiary: grey;
+    --dark: darkgrey;
+    --light: white;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--primary);
+    background-color: var(--light);
+    line-height: 1.5;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  footer {
+    background-color: var(--tertiary);
+    padding: 10px;
+    text-align: center;
+    color: var(--secondary);
+    }
+
+  header {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: var(--tertiary);
+  }
+  
+  header h1 {
+    color: var(--tertiary);
+    background-color: var(--secondary);
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 60px;
+    line-height: 1;
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    text-decoration: none;
+    padding: 5px;
+    color: var(--secondary);
+    margin-right: 10px;
+    transition: 0.25s ease-in;
+    font-size: 20px;
+  }
+  
+  nav a:hover {
+    color: var(--primary);
+  }
+  
+  main {
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+  
+  .pages {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .page {
+    margin: 25px 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+  
+  .page h2 {
+    flex: 0 0 20%;
+    text-align: right;
+    padding-right: 15px;
+    border-right: 2px solid var(--primary);
+    font-size: 40px;
+  }
+  
+  .page div {
+    flex: 0 0 79%;
+  }
+  
+  .page p {
+    margin-bottom: 20px;
+  }
+  
+  .aboutme-container {
+    display: flex;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 10px auto;
+    display: block;
+}
+
+  .works {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .work {
+    border: 5px solid var(--secondary);
+    color: var(--tertiary);
+    min-height: 250px;
+    max-height: 250px;
+    flex-basis: calc(32%);
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 20px 0;
+    margin: 5px;
+    text-decoration: none;
+    background-blend-mode: soft-light;
+    background-size: 100%;
+    transition: 0.25s ease-in;
+    font-size: 15px;
+  }
+  
+  .work:first-child {
+    min-height: 500px;
+    flex-basis: 97.5%;
+}
+
+  .work:hover {
+    background-color: var(--tertiary);
+  }
+  
+  .work div {
+    background-color: var(--secondary);
+    padding: 10px;
+  }
+  
+  .work h3 {
+    font-size: 25px;
+  }
+  
+  .contact address {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .contact address a {
+    color: var(--primary);
+    padding: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    font-style: normal;
+    transition: 0.25s ease-in;
+  }
+  
+  .contact address a:hover {
+    color: var(--secondary);
+  }
+  
+
+  .scheduler {
+    background-image: url("../images/scheduler.png");
+  }
+  
+  .quiz {
+    background-image: url("../images/quiz.jpg");
+  }
+  
+  .weather {
+    background-image: url("../images/weather.jpg");
+  }
+  
+  .password {
+    background-image: url("../images/password.png");
+  }
+  
+  
+  @media screen and (max-width: 1055px) {
+    header {
+      padding: 0 0 10px 0;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    header h1 {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      font-size: 10vw;
+    }
+  
+    header nav {
+      justify-content: center;
+    }
+  
+    .page  h2,
+    .page div {
+      flex: 0 0 100%;
+    }
+  
+    .page h2 {
+      border-right: none;
+      border-bottom: 4px solid var(--primary);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      text-align: left;
+      font-size: 7vw;
+    }
+
+    .aboutme-container {
+        flex-direction: column;
+      }
+    
+      .profile-photo {
+        margin: 10px 0;
+      }
+
+  }
+  
+  @media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 8vw;
+      }
+    
+      .page h2 {
+        font-size: 10vw;
+      }
+    .work,
+    .work:first-child {
+      flex-basis: 100%;
+    }
+  
+    .work:first-child {
+      min-height: 150px;
+    }
+
+    .contact address {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
